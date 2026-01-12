@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cozy Cup Cafe | Contact Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  padding-top:110px;
+  background:#f5f7f4;
+  font-family: Segoe UI, sans-serif;
+}
+
+/* 🌟 GLASS NAVBAR 🌟 */
+.glass-nav{
+  background:rgba(15,15,15,.78)!important;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:18px;
+  width:92%;
+  margin:10px auto;
+  box-shadow:0 25px 40px rgba(0,0,0,.28);
+  padding:8px 14px!important;
+}
+
+.logo-text{
+  font-weight:800;
+  letter-spacing:.3px;
+}
+
+.nav-pill{
+  border-radius:999px;
+  padding:8px 16px!important;
+  color:white!important;
+  transition:.25s;
+  font-weight:500;
+}
+
+.nav-pill:hover{
+  background:white;
+  color:black!important;
+}
+
+.active-link{
+  background:white;
+  color:black!important;
+}
+
+/* Hero */
+.hero{
+  background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover no-repeat;
+  padding:110px 0;
+  color:white;
+}
+
+.hero-mask{
+  background:rgba(0,0,0,.75);
+  border-radius:18px;
+  padding:50px;
+}
+
+/* Cards */
+.info-card, .store-card{
+  border-radius:18px;
+  border:0;
+  box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.store-card:hover{
+  transform:translateY(-5px);
+  transition:.3s;
+}
+
+/* Footer */
+footer{
+  background:#000;
+  color:#ddd;
+  padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🌟 NEW NAVBAR -->
+<nav class="glass-nav navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand logo-text" href="index.html">Sunrise Coffee</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center">
+
+        <li class="nav-item">
+          <a class="nav-link nav-pill" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-pill" href="menu.html">Menu</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-pill active-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container">
+    <div class="hero-mask mx-auto col-lg-7">
+      <h1 class="fw-bold">Get in Touch</h1>
+      <p>We’d love to hear from you ☕</p>
+    </div>
+  </div>
+</section>
+
+<div class="container my-5">
+
+<!-- CONTACT INFO CARDS -->
+<div class="row g-4 text-center">
+
+  <div class="col-md-4">
+    <div class="card info-card p-4">
+      <h5>📍 Visit Us</h5>
+      <p>Multiple stores across South India</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card info-card p-4">
+      <h5>📞 Call Us</h5>
+      <p>+91 98765 43210</p>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card info-card p-4">
+      <h5>📧 Email</h5>
+      <p>support@cozycupcafe.com</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTACT FORM -->
+<div class="row mt-5">
+  <div class="col-lg-6 mx-auto">
+    <div class="card info-card p-4">
+      <h4 class="text-center mb-3">Send us a Message</h4>
+
+      <div class="mb-3">
+        <label>Name</label>
+        <input class="form-control" placeholder="Your name">
+      </div>
+
+      <div class="mb-3">
+        <label>Email</label>
+        <input class="form-control" placeholder="email@example.com">
+      </div>
+
+      <div class="mb-3">
+        <label>Message</label>
+        <textarea class="form-control" rows="4" placeholder="Write your message"></textarea>
+      </div>
+
+      <button class="btn btn-dark w-100">Submit</button>
+
+    </div>
+  </div>
+</div>
+
+<hr class="my-5">
+
+<!-- STORE LOCATIONS -->
+<h3 class="text-center fw-bold mb-4">📍 Our Store Locations</h3>
+
+<div class="row g-4">
+
+  <!-- Karnataka -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card store-card p-3">
+      <h5>🟢 Karnataka</h5>
+      <ul>
+        <li>Bangalore – Indiranagar</li>
+        <li>Bangalore – Whitefield</li>
+        <li>Mysuru – VV Mohalla</li>
+      </ul>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-success">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Maharashtra -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card store-card p-3">
+      <h5>🟢 Maharashtra</h5>
+      <ul>
+        <li>Mumbai – Bandra</li>
+        <li>Mumbai – Andheri West</li>
+        <li>Pune – FC Road</li>
+      </ul>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-success">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Tamil Nadu -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card store-card p-3">
+      <h5>🟢 Tamil Nadu</h5>
+      <ul>
+        <li>Chennai – T Nagar</li>
+        <li>Coimbatore – RS Puram</li>
+        <li>Madurai – KK Nagar</li>
+      </ul>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-success">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Kerala -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card store-card p-3">
+      <h5>🟢 Kerala</h5>
+      <ul>
+        <li>Kochi – Marine Drive</li>
+        <li>Trivandrum – Kazhakoottam</li>
+        <li>Calicut – Mavoor Road</li>
+      </ul>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-success">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Andhra Pradesh -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card store-card p-3">
+      <h5>🟢 Andhra Pradesh</h5>
+      <ul>
+        <li>Vijayawada – MG Road</li>
+        <li>Visakhapatnam – Beach Road</li>
+        <li>Guntur – Arundelpet</li>
+      </ul>
+      <a href="https://maps.google.com" target="_blank" class="btn btn-sm btn-success">View on Map</a>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<footer class="text-center">
+  © 2026 Cozy Cup Cafe — Crafted with ❤️
+</footer>
+
+</body>
+</html>
