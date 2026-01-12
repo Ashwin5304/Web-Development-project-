@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cozy Cup Cafe | Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  padding-top:110px;
+  background:#f5f7f4;
+  font-family:Segoe UI, sans-serif;
+}
+
+/* 🌟 GLASS NAVBAR */
+.glass-nav{
+  background:rgba(15,15,15,.78)!important;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:18px;
+  width:92%;
+  margin:10px auto;
+  box-shadow:0 25px 40px rgba(0,0,0,.28);
+  padding:8px 14px!important;
+}
+
+.nav-pill{
+  border-radius:999px;
+  padding:8px 16px!important;
+  color:white!important;
+  transition:.25s;
+  font-weight:500;
+}
+
+.nav-pill:hover{
+  background:white;
+  color:black!important;
+}
+
+.active-link{
+  background:white;
+  color:black!important;
+}
+
+.cart-pill{
+  background:linear-gradient(135deg,#4ade80,#22c55e);
+  border-radius:999px;
+  font-weight:600;
+  color:black;
+}
+
+/* ===== Banner ===== */
+.banner{
+  background:url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085") center/cover no-repeat;
+  padding:100px 0;
+  color:white;
+}
+
+.banner-mask{
+  background:rgba(0,0,0,.7);
+  padding:60px;
+  border-radius:18px;
+}
+
+/* ===== Menu Cards ===== */
+.section-title{font-weight:800;font-size:26px;}
+
+.menu-card{
+  border-radius:16px;
+  overflow:hidden;
+  border:0;
+  box-shadow:0 12px 26px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.menu-card:hover{transform:translateY(-6px);}
+.menu-card img{height:170px;object-fit:cover;}
+</style>
+</head>
+
+<body>
+
+<!-- 🌟 NAVBAR -->
+<nav class="glass-nav navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="index.html">Sunrise Coffee</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center">
+
+        <li class="nav-item"><a class="nav-link nav-pill" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link nav-pill active-link" href="#">Menu</a></li>
+        <li class="nav-item"><a class="nav-link nav-pill" href="contact.html">Contact</a></li>
+
+        <li class="nav-item ms-2">
+          <a class="btn cart-pill" data-bs-toggle="modal" data-bs-target="#cartModal">
+            🛒 Cart (<span id="cartCount">0</span>)
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- BANNER -->
+<section class="banner text-center">
+  <div class="container">
+    <div class="banner-mask">
+      <h1 class="fw-bold">Our Menu</h1>
+      <p>Handcrafted drinks & freshly made bites</p>
+    </div>
+  </div>
+</section>
+
+<div class="container my-5">
+
+<!-- ☕ COFFEE -->
+<p class="section-title mb-3">☕ Coffee</p>
+
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card menu-card">
+      <img src="../images/cap.jpg">
+      <div class="card-body text-center">
+        <h5>Cappuccino</h5>
+        <strong>₹180</strong><br>
+        <button class="btn btn-success btn-sm mt-2" onclick="addToCart('Cappuccino - ₹180')">Add to Cart</button>
+        <button class="btn btn-outline-dark btn-sm mt-2" onclick="openCustomize('Cappuccino',180,'coffee')">Customize</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card menu-card">
+      <!-- change this to your real path if needed -->
+      <img src="../images/latte.jpg"  style="object-fit:cover">
+      <div class="card-body text-center">
+        <h5>Latte</h5>
+        <strong>₹200</strong><br>
+        <button class="btn btn-success btn-sm mt-2" onclick="addToCart('Latte - ₹200')">Add to Cart</button>
+        <button class="btn btn-outline-dark btn-sm mt-2" onclick="openCustomize('Latte',200,'coffee')">Customize</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- 🍔 BURGERS -->
+<p class="section-title mb-3">🍔 Burgers & Sandwiches</p>
+
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card menu-card">
+      <img src="../images/burger.jpg">
+      <div class="card-body text-center">
+        <h5>Veg Burger</h5>
+        <strong>₹150</strong><br>
+        <button class="btn btn-success btn-sm mt-2" onclick="addToCart('Veg Burger - ₹150')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card menu-card">
+      <img src="../images/cburger.jpg">
+      <div class="card-body text-center">
+        <h5>Chicken Burger</h5>
+        <strong>₹190</strong><br>
+        <button class="btn btn-success btn-sm mt-2" onclick="addToCart('Chicken Burger - ₹190')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<hr class="my-5">
+
+<!-- 🫖 TEA -->
+<p class="section-title mb-3">🫖 Tea</p>
+
+<div class="row g-4">
+
+  <div class="col-md-4">
+    <div class="card menu-card">
+      <img src="../images/gtea.jpg "  style="object-fit:cover">
+      <div class="card-body text-center">
+        <h5>Green Tea</h5>
+        <strong>₹130</strong><br>
+        <button class="btn btn-success btn-sm mt-2" onclick="addToCart('Green Tea - ₹130')">Add to Cart</button>
+        <button class="btn btn-outline-dark btn-sm mt-2" onclick="openCustomize('Green Tea',130,'tea')">Customize</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card menu-card">
+      <img src="../images/btea.jpg">
+      <div class="card-body text-center">
+        <h5>Black Tea</h5>
+        <strong>₹120</strong><br>
+        <button class="btn btn-success btn-sm mt-2" onclick="addToCart('Black Tea - ₹120')">Add to Cart</button>
+        <button class="btn btn-outline-dark btn-sm mt-2" onclick="openCustomize('Black Tea',120,'tea')">Customize</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- CUSTOMIZE MODAL -->
+<div class="modal fade" id="customPanel">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+  <h5 id="cTitle">Customize</h5>
+  <button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+  <p id="baseText" class="text-muted"></p>
+
+  <label class="fw-bold">Size</label>
+  <select id="sizeSelect" class="form-select" onchange="updateTotal()">
+    <option value="small">Small</option>
+    <option value="medium">Medium (+₹20)</option>
+    <option value="large">Large (+₹40)</option>
+  </select>
+
+  <div id="milkBlock" class="mt-2">
+    <label class="fw-bold">Milk</label>
+    <select id="milkSelect" class="form-select">
+      <option>Whole</option>
+      <option>Skim</option>
+      <option>Almond</option>
+      <option>Oat</option>
+    </select>
+  </div>
+
+  <label class="fw-bold mt-2">Sugar Level</label>
+  <input type="range" id="sugarRange" min="0" max="100" value="50" class="form-range">
+
+  <p class="mt-3 fs-5">Total ₹<span id="totalPrice"></span></p>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-success" onclick="finishCustomize()">Add to Cart</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- CART MODAL -->
+<div class="modal fade" id="cartModal">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+  <h5>Your Cart</h5>
+  <button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+  <ul id="cartItems" class="list-group"></ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* CART */
+let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+updateCart();
+
+function addToCart(x){
+  cart.push(x);
+  localStorage.setItem("cart",JSON.stringify(cart));
+  updateCart();
+}
+
+/* 🟢 UPDATED CART WITH REMOVE BUTTON */
+function updateCart(){
+  document.getElementById("cartCount").innerText = cart.length;
+
+  let ul=document.getElementById("cartItems");
+  ul.innerHTML="";
+
+  cart.forEach((item, index)=>{
+    let li=document.createElement("li");
+    li.className="list-group-item d-flex justify-content-between align-items-center";
+
+    li.innerHTML = `
+      <span>${item}</span>
+      <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">✖</button>
+    `;
+
+    ul.appendChild(li);
+  });
+}
+
+/* delete item */
+function removeItem(index){
+  cart.splice(index,1);
+  localStorage.setItem("cart",JSON.stringify(cart));
+  updateCart();
+}
+
+/* CUSTOMIZE */
+let itemName="", basePrice=0, drinkType="coffee";
+
+function openCustomize(name, price, type){
+  itemName=name;
+  basePrice=price;
+  drinkType=type;
+
+  document.getElementById("cTitle").innerText=name;
+  document.getElementById("baseText").innerText="Base price ₹"+price;
+
+  document.getElementById("milkBlock").style.display = (type==="tea") ? "none" : "block";
+
+  updateTotal();
+
+  new bootstrap.Modal(document.getElementById("customPanel")).show();
+}
+
+function updateTotal(){
+  let size=document.getElementById("sizeSelect").value;
+  let extra=0;
+  if(size==="medium") extra=20;
+  if(size==="large") extra=40;
+  document.getElementById("totalPrice").innerText = basePrice + extra;
+}
+
+function finishCustomize(){
+  let size=document.getElementById("sizeSelect").value;
+  let sugar=document.getElementById("sugarRange").value;
+
+  let milk="";
+  if(drinkType==="coffee"){
+    milk = ", " + document.getElementById("milkSelect").value + " milk";
+  }
+
+  let price=document.getElementById("totalPrice").innerText;
+
+  cart.push(`${itemName} (${size}, Sugar ${sugar}%${milk}) - ₹${price}`);
+
+  localStorage.setItem("cart",JSON.stringify(cart));
+  updateCart();
+}
+</script>
+
+</body>
+</html>
